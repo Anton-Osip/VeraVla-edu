@@ -1,0 +1,187 @@
+.header {
+  background: url("./../../img/header-bg.jpg") no-repeat top center/cover;
+  font-family: "Avenir";
+  color: $text-color;
+  font-size: 1.125rem;
+  line-height: 1.222em;
+  position: relative;
+  &__top {
+    padding: 3rem 0;
+  }
+  &__top-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__content {
+    padding: 6.6875rem 0 11.125rem;
+  }
+
+  &__content-subtitle {
+    font-weight: 400;
+    color: #747d81;
+  }
+
+  &__content-title {
+    font-weight: 400;
+    font-size: 6.75rem;
+    line-height: 1.222em;
+    background: linear-gradient(180deg, #ffffff 31.75%, #1a3031 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  &__content-description {
+    max-width: 580px;
+    font-weight: 500;
+    margin-bottom: 9.8333em;
+  }
+
+  &__content-box {
+    display: grid;
+    grid-template-columns: 71px 472px;
+    grid-template-rows: 38px 51px;
+    grid-column-gap: 2.0625rem;
+    margin-bottom: 6.312rem;
+  }
+
+  &__img-box {
+    grid-row: 1/3;
+    width: 71px;
+    height: 71px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 224, 255, 0.11) 0%,
+      rgba(0, 224, 255, 0.0539) 100%
+    );
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__content-box-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.222em;
+  }
+
+  &__content-box-description {
+    grid-column: 2/3;
+    font-weight: 500;
+    color: rgba(3, 225, 255, 0.66);
+  }
+
+  &__content-btn {
+    font-family: "Avenir";
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1.25em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 1.9em 1.0833em;
+    background: linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66) 0%,
+      #13cdc2 100%
+    );
+    box-shadow: 0px 7px 20px -7px #00e0ff;
+    border-radius: 9px;
+    border: none;
+  }
+
+  &__down {
+    position: absolute;
+    bottom: 9rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__down-text {
+    writing-mode: vertical-lr;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: #747d81;
+    margin-left: 8px;
+  }
+
+  &__down-img {
+    width: 100%;
+  }
+}
+
+.logo {
+  width: 17.937rem;
+  height: 5.375rem;
+  &__img {
+    width: 100%;
+  }
+}
+.phone {
+  position: relative;
+  padding-left: 2.1875rem;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    background: url("../../img/phone.svg") no-repeat center/cover;
+  }
+  &__link {
+    font-weight: 500;
+    text-align: right;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.consultation {
+  display: none;
+  position: absolute;
+  left: 25px;
+  top: 158px;
+
+  &__img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66) 0%,
+      #13cdc2 100%
+    );
+    box-shadow: 0px 7px 20px -7px #00e0ff;
+    border-radius: 50%;
+  }
+
+  &__text {
+    writing-mode: vertical-lr;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: #00e0ff;
+    margin-left: 44px;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1550px) {
+  .consultation {
+    display: block;
+  }
+}

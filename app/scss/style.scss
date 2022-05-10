@@ -1,0 +1,16 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.container {
+  margin: 0 auto;
+}
+img {
+  display: block;
+}
+
+@media (max-width: 1230px) {
+  :root {
+    font-size: calc(0.04rem + 1vw);
+  }
+}
