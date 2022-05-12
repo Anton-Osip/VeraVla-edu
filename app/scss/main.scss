@@ -1,11 +1,9 @@
 @import "variables"; //пишем переменные
 @import "reset"; //сборс стилей
 @import "fonts"; //подключаем шрифты (локально)
-@import "style"; 
+@import "style";
 @import "grid";
 
 //подключаем БЭМ блоки
 @import "blocks/header";
-@import "blocks/banner";
 @import "blocks/couses.scss";
-@import "blocks/intelligence";

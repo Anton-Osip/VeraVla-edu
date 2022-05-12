@@ -16,6 +16,9 @@
   &__content {
     padding: 6.6875rem 0 11.125rem;
   }
+  .header__content .container {
+    position: relative;
+  }
 
   &__content-subtitle {
     font-weight: 400;
@@ -33,23 +36,23 @@
   }
 
   &__content-description {
-    max-width: 580px;
+    max-width: 36.25rem;
     font-weight: 500;
     margin-bottom: 9.8333em;
   }
 
   &__content-box {
     display: grid;
-    grid-template-columns: 71px 472px;
-    grid-template-rows: 38px 51px;
+    grid-template-columns: 4.4375rem 29.5rem;
+    grid-template-rows: 2.375rem 3.1875rem;
     grid-column-gap: 2.0625rem;
     margin-bottom: 6.312rem;
   }
 
   &__img-box {
     grid-row: 1/3;
-    width: 71px;
-    height: 71px;
+    width: 4.4375rem;
+    height: 4.4375rem;
     background: linear-gradient(
       180deg,
       rgba(0, 224, 255, 0.11) 0%,
@@ -97,7 +100,7 @@
 
   &__down {
     position: absolute;
-    bottom: 9rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -117,6 +120,10 @@
   &__down-img {
     width: 100%;
   }
+
+  &__content-mobile {
+    display: none;
+  }
 }
 
 .logo {
@@ -127,31 +134,31 @@
   }
 }
 .phone {
-  position: relative;
-  padding-left: 2.1875rem;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 1.5625rem;
-    height: 1.5625rem;
-    background: url("../../img/phone.svg") no-repeat center/cover;
-  }
   &__link {
+    position: relative;
+    padding-left: 2.1875rem;
     font-weight: 500;
     text-align: right;
     text-decoration: none;
     color: inherit;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      background: url("../../img/phone.svg") no-repeat center/cover;
+    }
   }
 }
 .consultation {
   display: none;
   position: absolute;
-  left: 25px;
-  top: 158px;
+  left: -150px;
+  top: 0;
 
   &__img-box {
     display: flex;
@@ -183,5 +190,121 @@
 @media (min-width: 1550px) {
   .consultation {
     display: block;
+  }
+}
+@media (max-width: 824px) {
+  .header__down {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    background: url("./../../img/header-mobile-bg.jpg") no-repeat top
+      center/cover;
+    font-size: 16px;
+    line-height: 20px;
+    &__top {
+      padding: 24px 0;
+    }
+
+    &__content {
+      padding: 0px 0 75px;
+    }
+
+    &__content-subtitle {
+      margin-bottom: 5px;
+    }
+
+    &__content-title {
+      font-size: 51px;
+      line-height: 62px;
+      margin-bottom: 5px;
+    }
+
+    &__content-description {
+      max-width: 300px;
+      margin-bottom: 45px;
+    }
+
+    &__content-box {
+      display: grid;
+      grid-template-columns: 49px 220px;
+      grid-template-rows: 24px auto;
+      grid-column-gap: 25px;
+      margin-bottom: 20px;
+    }
+
+    &__img-box {
+      width: 49px;
+      height: 49px;
+    }
+
+    &__content-box-title {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    &__content-box-description {
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    &__content-btn {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 14px 17px;
+    }
+    &__content-mobile {
+      display: block;
+      position: relative;
+      margin-bottom: 15px;
+      & img {
+        width: 100%;
+      }
+    }
+    &__socialls {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__soacials-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 63px;
+      height: 63px;
+      background: linear-gradient(
+        180deg,
+        rgba(3, 225, 255, 0.66) 0%,
+        #13cdc2 100%
+      );
+      box-shadow: 0px 7px 20px -7px #00e0ff;
+      border-radius: 50%;
+      margin: 20px 0;
+      & img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .logo {
+    width: 195px;
+    height: 58px;
+  }
+  .phone {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      font-size: 0px;
+      padding-left: 31px;
+      &::before {
+        width: 31px;
+        height: 31px;
+      }
+    }
   }
 }

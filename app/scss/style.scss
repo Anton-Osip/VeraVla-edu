@@ -8,9 +8,32 @@
 img {
   display: block;
 }
+.section {
+  padding: 130px 0 120px;
+}
+
+.title {
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 66px;
+  text-transform: uppercase;
+  max-width: 776px;
+  color: $text-color;
+  margin-bottom: 60px;
+}
+
+.title-blue {
+  color: #4abcec;
+}
 
 @media (max-width: 1230px) {
   :root {
     font-size: calc(0.04rem + 1vw);
+  }
+}
+@media (max-width: 374px) {
+  :root {
+    font-size: 16px;
   }
 }
