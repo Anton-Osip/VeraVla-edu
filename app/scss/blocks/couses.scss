@@ -36,11 +36,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .causes {
     &__card {
       padding: 15px;
-      
+
       &:after {
         bottom: -5px;
         width: 27px;
@@ -51,15 +51,10 @@
       width: 42px;
       height: 42px;
       margin-bottom: 8px;
-      
     }
     &__text {
       font-size: 14px;
       line-height: 17px;
-    }
-    & .title {
-      font-size: 30px;
-      line-height: 37px;
     }
     .col-sm-12 {
       margin-bottom: 18px;

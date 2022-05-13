@@ -1,0 +1,71 @@
+.intelligence {
+  background: url("../../img/intelegens.jpg") no-repeat top center/cover;
+  &__list {
+    list-style: none;
+    margin-bottom: 4.375rem;
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 5px;
+    max-width: 43.25rem;
+    font-family: "Avenir";
+    font-weight: 450;
+    font-size: 0.9375rem;
+    line-height: 1.2em;
+    color: #ffffff;
+    background: linear-gradient(
+      90deg,
+      rgba(31, 63, 77, 0.54) 0%,
+      rgba(31, 75, 94, 0) 100%
+    );
+    padding: 1.5rem 0px 1.5rem 4.75rem;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      width: 2.0625rem;
+      height: 2.0625rem;
+      background: url("../../img/intelegens-list.svg") no-repeat center/cover;
+      position: absolute;
+      top: 1.0625rem;
+      left: 1.5rem;
+    }
+  }
+  &__img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .intelligence {
+    background: url("../../img/header-mobile-bg.jpg") no-repeat top center/cover;
+    &.section {
+      padding: 50px 0 73px;
+    }
+    &__list {
+      margin-bottom: 5px;
+    }
+
+    &__item {
+      margin-bottom: 7px;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 24px 35px 24px 77px;
+      position: relative;
+      &::before {
+        width: 33px;
+        height: 33px;
+        top: 17px;
+        left: 24px;
+      }
+    }
+    &__img {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+}
