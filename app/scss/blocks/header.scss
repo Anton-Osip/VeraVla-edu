@@ -1,5 +1,5 @@
 .header {
-  background: url("./../../img/header-bg.jpg") no-repeat top center/cover;
+  background: url("./../../img/header/header-bg.jpg") no-repeat top center/cover;
   font-family: "Avenir";
   color: $text-color;
   font-size: 1.125rem;
@@ -64,7 +64,8 @@
     justify-content: center;
   }
   &__img {
-    width: 100%;
+    width: 2.4375rem;
+    height: 2.4375rem;
   }
 
   &__content-box-title {
@@ -84,6 +85,7 @@
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
   }
 
   &__down-text {
@@ -131,7 +133,7 @@
       bottom: 0;
       width: 1.5625rem;
       height: 1.5625rem;
-      background: url("../../img/phone.svg") no-repeat center/cover;
+      background: url("../../img/svg-icon/phone.svg") no-repeat center/cover;
     }
   }
 }
@@ -181,7 +183,7 @@
 
 @media (max-width: 500px) {
   .header {
-    background: url("./../../img/header-mobile-bg.jpg") no-repeat top
+    background: url("./../../img/mobile-bg/mobile-bg-1.jpg") no-repeat bottom
       center/cover;
     font-size: 16px;
     line-height: 20px;

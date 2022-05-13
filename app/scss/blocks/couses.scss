@@ -1,5 +1,8 @@
 .causes {
-  background: url("./../../img/causes-bg.jpg") no-repeat top center/cover;
+  background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
+  &__cards {
+    align-items: stretch;
+  }
   & .col-md-3 {
     margin-bottom: 20px;
   }
@@ -13,13 +16,14 @@
     padding: 2.5rem;
     border: 3px solid #49b9e8;
     position: relative;
+    height: 100%;
     &:after {
       content: "";
       position: absolute;
       bottom: -7px;
       width: 41px;
       height: 10px;
-      background: url("../../img/causes-border.svg") no-repeat center/cover;
+      background: url("../../img/svg-icon/ellipse.svg") no-repeat center/cover;
     }
   }
   &__img {
@@ -56,9 +60,10 @@
       font-size: 14px;
       line-height: 17px;
     }
-    .col-sm-12 {
-      margin-bottom: 18px;
+    .col-12 {
+      margin-bottom: 20px;
     }
+
     &.section {
       padding: 55px 0 70px;
     }

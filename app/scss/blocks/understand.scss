@@ -1,0 +1,58 @@
+.understand {
+  background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.125rem;
+    gap: 20px;
+  }
+
+  &__img {
+    max-width: 285px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #49b9e8;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-family: "Avenir";
+    font-weight: 450;
+    font-size: 1rem;
+    line-height: 1.4375em;
+    color: #ffffff;
+    max-width: 263px;
+  }
+}
+@media (max-width: 540px) {
+  .understand {
+    &.section {
+      padding: 50px 0 73px;
+    }
+
+    &__block {
+      flex-direction: column;
+      margin-bottom: 3.125rem;
+      gap: 0;
+    }
+    &__img {
+      max-width: 100%;
+      margin-bottom: 17px;
+    }
+
+    &__text {
+      width: 100%;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__block-down {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

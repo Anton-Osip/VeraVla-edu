@@ -1,5 +1,6 @@
 .intelligence {
-  background: url("../../img/intelegens.jpg") no-repeat top center/cover;
+  background: url("../../img/intelligence/intelligence-bg.jpg") no-repeat bottom
+    center/cover;
   &__list {
     list-style: none;
     margin-bottom: 4.375rem;
@@ -27,7 +28,8 @@
       position: relative;
       width: 2.0625rem;
       height: 2.0625rem;
-      background: url("../../img/intelegens-list.svg") no-repeat center/cover;
+      background: url("../../img/svg-icon/checked_radio_button.svg") no-repeat
+        center/cover;
       position: absolute;
       top: 1.0625rem;
       left: 1.5rem;
@@ -40,7 +42,7 @@
 
 @media (max-width: 500px) {
   .intelligence {
-    background: url("../../img/header-mobile-bg.jpg") no-repeat top center/cover;
+    background: url("../../img/mobile-bg/mobile-bg-2.jpg") no-repeat center/ cover;
     &.section {
       padding: 50px 0 73px;
     }
