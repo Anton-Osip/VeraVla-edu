@@ -1,6 +1,5 @@
 .auther {
-  background: url("../../img/auther/auther-bg.jpg") no-repeat 
-    center/cover;
+  background: url("../../img/auther/auther-bg.jpg") no-repeat center/cover;
   color: #fff;
   &.section {
     padding-bottom: 0;
@@ -25,7 +24,6 @@
   &__img-box {
     max-width: 441px;
     position: relative;
-    top: 5px;
   }
 
   &__img {
@@ -34,15 +32,15 @@
 
   &__man {
     position: absolute;
-    bottom: 120px;
-    left: 250px;
+    bottom: 7.5rem;
+    left: 15.625rem;
   }
 
   &__name {
     font-family: "Avenir";
     font-weight: 750;
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 0.8333em;
     color: #00e0ff;
   }
 
@@ -50,8 +48,50 @@
     font-family: "Avenir";
     font-style: normal;
     font-weight: 450;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.428em;
     color: #ffffff;
+  }
+  &__mobile-img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .auther {
+    background: url("../../img/mobile-bg/mobile-bg-1.jpg") no-repeat top
+      center/cover;
+    &.section {
+      padding-top: 65px;
+    }
+    &__inner {
+      display: flex;
+      gap: 0px;
+      flex-direction: column;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+
+    &__img-box {
+      display: none;
+    }
+    &__mobile-img {
+      display: block;
+      width: 100%;
+    }
   }
 }
