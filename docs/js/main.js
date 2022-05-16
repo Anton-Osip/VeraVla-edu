@@ -1,0 +1,1 @@
+document.querySelector(".knowledge__blocks").addEventListener("click",(function(e){var t,l;e.target.closest(".knowledge__header")&&(t=e.target.closest(".knowledge__header"),l=t.nextElementSibling,console.log(l))}));

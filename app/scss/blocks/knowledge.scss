@@ -1,0 +1,203 @@
+.knowledge {
+  background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
+
+  font-family: "Avenir";
+  font-weight: 450;
+  counter-reset: knowledge;
+
+  color: #ffffff;
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+
+  &__blocks {
+    margin-bottom: 59px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(286.41deg, #073447 3.63%, #08262b 90.98%);
+    border-radius: 6px;
+    margin-bottom: 35px;
+    padding: 15px;
+  }
+
+  &__header-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__dote {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(180deg, #00e0ff 0%, #4a8bec 100%);
+    box-shadow: 0px 4px 8px rgba(0, 224, 255, 0.56);
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+
+  &__header-title {
+    font-family: "Avenir";
+    font-weight: 750;
+    font-size: 20px;
+    line-height: 21px;
+    margin-right: 10px;
+  }
+
+  &__header-description {
+    font-family: "Avenir";
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 21px;
+    color: #08b1b9;
+  }
+
+  &__header-btn {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 224, 255, 0.11) 0%,
+      rgba(0, 224, 255, 0.0539) 100%
+    );
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__body {
+    display: none;
+  }
+
+  &__info {
+    counter-increment: knowledge;
+    position: relative;
+    padding-left: 41px;
+    font-family: "Avenir";
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 40px;
+
+    &::before {
+      content: counter(knowledge);
+      width: 27px;
+      height: 27px;
+      background: #4abcec;
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      font-family: "Avenir";
+      font-weight: 750;
+      font-size: 14px;
+      line-height: 21px;
+      color: #08262b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__info-title {
+    color: #4abcec;
+    margin-bottom: 15px;
+  }
+
+  &__header-development {
+    font-weight: 450;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #08262b;
+    background: #00e0ff;
+    padding: 0 3px;
+    margin-left: 20px;
+  }
+  &__item--open {
+    & .knowledge__header-img {
+      transform: rotateZ(180deg);
+    }
+    & .knowledge__body {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .knowledge {
+    &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__blocks {
+      margin-bottom: 45px;
+    }
+    &__header {
+      margin-bottom: 22px;
+    }
+    &__header-title {
+      margin-right: 5px;
+    }
+    &__info {
+      padding-left: 35px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    &__header-development {
+      font-weight: 450;
+      font-size: 13px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #08262b;
+      background: #00e0ff;
+      padding: 0 3px;
+      margin-left: 20px;
+    }
+    &__info-text {
+      height: 110px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(
+        180deg,
+        #ffffff 68.23%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &__info-text--open {
+      background: linear-gradient(180deg, #ffffff 68.23%, #fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      height: 100%;
+      transition: height 0.5s;
+    }
+    &__item--open {
+      & .knowledge__header-img {
+        transform: rotateZ(180deg);
+      }
+      & .knowledge__body {
+        display: block;
+      }
+    }
+  }
+}
