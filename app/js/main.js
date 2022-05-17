@@ -1,11 +1,17 @@
-let knowledgeBlocks = document.querySelector(".knowledge__blocks");
-knowledgeBlocks.addEventListener("click", (e) => {
-  if (e.target.closest(".knowledge__header")) {
-    openBlock(e.target.closest(".knowledge__header"));
-  }
-});
+import Swiper, { Navigation } from "swiper";
 
-function openBlock(block) {
-  let info = block.nextElementSibling;
-  console.log(info);
-}
+var swiper = new Swiper(".ads__swiper", {
+  modules: [Navigation],
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".ads__button-next",
+    prevEl: ".ads__button-prev",
+  },
+  breakpoints: {
+    824: { slidesPerView: 3 },
+    594: { slidesPerView: 2 },
+    320: { slidesPerView: 1 },
+  },
+});

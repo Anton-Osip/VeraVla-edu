@@ -3,6 +3,7 @@
 @import "fonts"; //подключаем шрифты (локально)
 @import "style";
 @import "grid";
+@import "../../node_modules/swiper/swiper.scss";
 
 //подключаем БЭМ блоки
 @import "blocks/header";
@@ -12,3 +13,4 @@
 @import "blocks/question.scss";
 @import "blocks/knowledge.scss";
 @import "blocks/auther.scss";
+@import "blocks/ads.scss";

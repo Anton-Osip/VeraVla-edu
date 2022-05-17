@@ -1,0 +1,136 @@
+.ads {
+  background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
+  &.section {
+    padding: 97px 0 85px;
+  }
+  &__slide {
+    width: 387px;
+  }
+
+  &__slide-img-block {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #1f4d60;
+      opacity: 0.43;
+      border-radius: 20px;
+    }
+    &::before {
+      width: 41px;
+      height: 10px;
+      content: "";
+      display: block;
+      position: absolute;
+      background: url("../../img/svg-icon/ellipse.svg") no-repeat center/cover;
+      bottom: -3px;
+      left: 42px;
+    }
+  }
+
+  &__slide-img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  &__slide-img-text {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    font-family: "Avenir";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: #ffffff;
+    z-index: 10;
+    padding-left: 15px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      background: url("../../img/svg-icon/calendar.svg") no-repeat center/cover;
+    }
+  }
+
+  &__slide-title {
+    font-family: "Avenir";
+    font-weight: 750;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
+
+  &__slide-description {
+    height: 66px;
+    font-family: "Avenir";
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 21px;
+    background: linear-gradient(
+      180deg,
+      #ffffff 65.96%,
+      rgba(105, 104, 104, 0) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 9px;
+  }
+
+  &__slide-btn {
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #4abcec;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__button-prev,
+  &__button-next {
+    width: 62px;
+    height: 62px;
+    background: #08262b;
+    opacity: 0.7;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 95px;
+    z-index: 50;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        rgba(3, 225, 255, 0.66) 0%,
+        #13cdc2 100%
+      );
+      box-shadow: 0px 7px 20px -7px #00e0ff;
+    }
+  }
+  &__button-next {
+    right: 20px;
+  }
+
+  &__button-prev {
+    left: 20px;
+  }
+}
