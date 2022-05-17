@@ -1,12 +1,11 @@
-.ads {
-  background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
+.jobs {
+  background: url("./../../img/bg/bg-3.jpg") no-repeat bottom center/cover;
   &.section {
     padding: 97px 0 85px;
   }
   &__slide {
     width: 387px;
   }
-
   &__slide-img-block {
     position: relative;
     width: 100%;
@@ -72,35 +71,21 @@
     margin-bottom: 18px;
   }
 
+  &__slide-descriptions {
+    margin-bottom: 9px;
+  }
+
   &__slide-description {
-    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__slide-text {
     font-family: "Avenir";
     font-weight: 450;
     font-size: 15px;
     line-height: 21px;
-    background: linear-gradient(
-      180deg,
-      #ffffff 65.96%,
-      rgba(105, 104, 104, 0) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    margin-bottom: 9px;
-  }
-
-  &__slide-btn {
-    font-family: "Avenir";
-    font-style: normal;
-    font-weight: 450;
-    font-size: 12px;
-    line-height: 21px;
-    text-decoration-line: underline;
-    color: #4abcec;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    color: #fff;
   }
   &__button-prev,
   &__button-next {
@@ -137,7 +122,7 @@
 }
 
 @media (max-width: 500px) {
-  .ads {
+  .jobs {
     &.section {
       padding: 58px 0;
     }
@@ -162,10 +147,8 @@
       margin-bottom: 18px;
     }
 
-    &__slide-description {
-      font-size: 14px;
-      line-height: 21px;
-      margin-bottom: 9px;
+    &__slide-text {
+      font-size: 13px;
     }
 
     &__button-prev,
