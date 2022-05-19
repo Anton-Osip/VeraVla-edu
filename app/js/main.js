@@ -34,6 +34,46 @@ const FILE = [
   },
 ];
 const adsBtn = document.querySelectorAll(".ads__slide-btn");
+const btn = document.querySelectorAll(".btn");
+const footerScroll = document.querySelector(".footer__scroll");
+const headerDown = document.querySelector(".header__down");
+const header = document.querySelector(".header");
+const accHeader = document.querySelectorAll(".knowledge__header");
+const knowledgeInfoText = document.querySelectorAll(".knowledge__info-text");
+
+knowledgeInfoText.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.target.classList.toggle("active");
+  });
+});
+
+accHeader.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    let elem = e.target.closest(".knowledge__header");
+    elem.classList.toggle("active");
+    let body = elem.nextElementSibling;
+    if (body.style.maxHeight) {
+      body.style.maxHeight = null;
+    } else {
+      body.style.maxHeight = body.scrollHeight + "px";
+    }
+  });
+});
+
+headerDown.addEventListener("click", () => {
+  let headerHight = header.clientHeight;
+  window.scrollTo({
+    top: headerHight,
+    behavior: "smooth",
+  });
+});
+
+footerScroll.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 adsBtn.forEach((elem) => {
   elem.addEventListener("click", (e) => {
@@ -82,7 +122,51 @@ adsBtn.forEach((elem) => {
     document.querySelector(".popup__close").addEventListener("click", () => {
       element.remove();
     });
-    document.querySelector(".popup").addEventListener("click", () => {
+  });
+});
+
+btn.forEach((elem) => {
+  elem.addEventListener("click", (e) => {
+    let element = document.createElement("div");
+    element.classList.add("popup");
+    document
+      .querySelector(".this-popup")
+      .insertAdjacentElement("beforeend", element);
+    element.innerHTML = `
+    <div class='popup__wrapper'>
+      <div class='popup__inner'>
+        <div class="popup__content">
+          <div class='popup__close'>
+            <div class='popup__line'></div>
+            <div class='popup__line'></div>
+          </div>
+          <form class="form">
+            <h1 class='form__title'>
+              <span class='form__title--blue'>Записаться</span> 
+              на ознакомительный вебинар
+            </h1>
+            <div class='form__input-block'>
+              <p class="form__text">Ваше ФИО:</p>
+              <input tupe='text' class='form__input' placeholder="Иван Иванович Иванов"/>
+            </div>
+            <div class='form__input-block'>
+              <p class="form__text">Номер телефона:</p>
+              <input tupe='tel' class='form__input' placeholder="+7 (___) ___-__-__"/>
+            </div>
+            <div class='form__input-block'>
+              <p class="form__text">Ваш e-mail:</p>
+              <input tupe='email' class='form__input' placeholder="name@gmail.com"/>
+            </div>
+            <div class='form__input-block'>
+              <p class="form__text">Выберите дату и время вебинара:</p>
+              <input tupe='date' class='form__input' placeholder="2021-12-05 18.00"/>
+            </div>
+            <button type='submit' class='form__btn'>Записаться</button>
+          </form>
+        </div>
+      </div>
+    </div>`;
+    document.querySelector(".popup__close").addEventListener("click", () => {
       element.remove();
     });
   });

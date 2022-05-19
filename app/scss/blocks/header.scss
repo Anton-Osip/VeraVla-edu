@@ -140,7 +140,7 @@
 .consultation {
   display: none;
   position: absolute;
-  left: -150px;
+  left: -100px;
   top: 0;
 
   &__img-box {
@@ -170,7 +170,7 @@
     margin-top: 50px;
   }
 }
-@media (min-width: 1550px) {
+@media (min-width: 1451) {
   .consultation {
     display: block;
   }

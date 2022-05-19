@@ -3,7 +3,6 @@
 
   font-family: "Avenir";
   font-weight: 450;
-  counter-reset: knowledge;
 
   color: #ffffff;
   &__title {
@@ -81,7 +80,10 @@
   }
 
   &__body {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    counter-reset: knowledge;
   }
 
   &__info {
@@ -128,12 +130,13 @@
     padding: 0 3px;
     margin-left: 20px;
   }
-  &__item--open {
+  &__header-img {
+    transition: transform 0.5s;
+  }
+  &__header.active {
     & .knowledge__header-img {
       transform: rotateZ(180deg);
-    }
-    & .knowledge__body {
-      display: block;
+      transition: transform 0.5s;
     }
   }
 }
@@ -168,7 +171,9 @@
       padding: 0 3px;
       margin-left: 20px;
     }
+
     &__info-text {
+      transition: max-height 0.5s ease-out;
       height: 110px;
       overflow: hidden;
       position: relative;
@@ -182,22 +187,13 @@
       background-clip: text;
       text-fill-color: transparent;
     }
-    &__info-text--open {
+    &__info-text.active {
       background: linear-gradient(180deg, #ffffff 68.23%, #fff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
-      height: 100%;
-      transition: height 0.5s;
-    }
-    &__item--open {
-      & .knowledge__header-img {
-        transform: rotateZ(180deg);
-      }
-      & .knowledge__body {
-        display: block;
-      }
+      height: auto;
     }
   }
 }

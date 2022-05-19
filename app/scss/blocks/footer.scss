@@ -1,6 +1,7 @@
 .footer {
   background: url("./../../img/bg/bg-2.jpg") no-repeat bottom center/cover;
   padding: 4.25rem 0 1.25rem;
+  position: relative;
   &__top {
     margin-bottom: 1.875rem;
   }
@@ -96,6 +97,58 @@
     max-width: 124px;
     width: 100%;
     margin-left: 1rem;
+  }
+  &__scroll {
+    position: absolute;
+    top: -225px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__scroll-text {
+    font-family: "Avenir";
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: #00e0ff;
+    writing-mode: vertical-lr;
+  }
+  &__scroll-img-block {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66) 0%,
+      #13cdc2 100%
+    );
+    box-shadow: 0px 7px 20px -7px #00e0ff;
+    border-radius: 50%;
+    margin-top: 33px;
+  }
+  &__scroll-img {
+    transform: rotateZ(-90deg);
+  }
+}
+@media (max-width: 1420px) {
+  .footer {
+    &__scroll {
+      top: -60px;
+      right: 20px;
+      left: auto;
+    }
+    &__scroll-text {
+      display: none;
+    }
+    &__scroll-img-block {
+      width: 52px;
+      height: 52px;
+    }
   }
 }
 
