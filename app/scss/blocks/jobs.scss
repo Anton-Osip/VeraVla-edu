@@ -1,5 +1,5 @@
 .jobs {
-  background: url("./../../img/bg/bg-3.jpg") no-repeat bottom center/cover;
+  background: url("../img/bg/bg-3.jpg") no-repeat bottom center/cover;
   &.section {
     padding: 97px 0 85px;
   }
@@ -29,7 +29,7 @@
       content: "";
       display: block;
       position: absolute;
-      background: url("../../img/svg-icon/ellipse.svg") no-repeat center/cover;
+      background: url("../img/svg-icon/ellipse.svg") no-repeat center/cover;
       bottom: -3px;
       left: 42px;
     }
@@ -58,7 +58,7 @@
       top: 6px;
       width: 9px;
       height: 9px;
-      background: url("../../img/svg-icon/calendar.svg") no-repeat center/cover;
+      background: url("../img/svg-icon/calendar.svg") no-repeat center/cover;
     }
   }
 

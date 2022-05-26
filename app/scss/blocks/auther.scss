@@ -1,5 +1,5 @@
 .auther {
-  background: url("../../img/auther/auther-bg.jpg") no-repeat center/cover;
+  background: url("../img/auther/auther-bg.jpg") no-repeat center/cover;
   color: #fff;
   &.section {
     padding-bottom: 0;
@@ -59,7 +59,7 @@
 
 @media (max-width: 500px) {
   .auther {
-    background: url("../../img/mobile-bg/mobile-bg-1.jpg") no-repeat top
+    background: url("../img/mobile-bg/mobile-bg-1.jpg") no-repeat top
       center/cover;
     &.section {
       padding-top: 65px;

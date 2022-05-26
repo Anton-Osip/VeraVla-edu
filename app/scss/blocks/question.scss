@@ -1,5 +1,5 @@
 .question {
-  background: url("../../img/question/question-bg.jpg") no-repeat top
+  background: url("../img/question/question-bg.jpg") no-repeat top
     center/cover;
   &__title {
     max-width: 55.625rem;
@@ -26,7 +26,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: url("../../img/svg-icon/question-item.svg") no-repeat
+      background: url("../img/svg-icon/question-item.svg") no-repeat
         center/cover;
     }
   }
@@ -37,7 +37,7 @@
 
 @media (max-width: 500px) {
   .question {
-    background: url("../../img/mobile-bg/mobile-bg-1.jpg") no-repeat top
+    background: url("../img/mobile-bg/mobile-bg-1.jpg") no-repeat top
       center/cover;
     &.section {
       padding: 50px 0 73px;
